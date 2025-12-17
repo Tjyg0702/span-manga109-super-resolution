@@ -91,5 +91,5 @@ Visual comparisons demonstrate that:
 
 ## Author
 
-Ziyang Deng   Shashank Patoju  Bharath Kumar Kakumani
+Ziyang Deng，   Shashank Patoju，  Bharath Kumar Kakumani
 NYU – Deep Learning Final Project
