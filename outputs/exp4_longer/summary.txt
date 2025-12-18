@@ -1,0 +1,4 @@
+Experiment: exp4_longer_training
+Best PSNR: 22.63 dB
+Training time: 3.6 min
+Config: configs/exp4_longer_training.yaml

@@ -1,0 +1,46 @@
+# SPAN Fine-tuning Configuration for Manga109
+# Reference: DL_proposal.pdf Section 3.6
+
+# Model (official SPAN: 6 SPAB blocks, 48 channels)
+model:
+  name: SPAN
+  num_features: 48  # feature_channels in official code
+  upscale: 4
+
+# Data
+data:
+  manga109_dir: data/Manga109_released_2023_12_07/images
+  processed_dir: data/processed
+  hr_patch_size: 192
+  lr_patch_size: 48
+  scale: 4
+  # Split: 80 train, 10 val, 19 test volumes
+  seed: 42
+
+# Training (from proposal Section 3.6)
+training:
+  batch_size: 16
+  max_iters: 5000
+  lr: 0.0002           # 2e-4
+  min_lr: 0.000001     # 1e-6
+  weight_decay: 0.01
+  val_interval: 500
+  patience: 1000       # Early stop if no improvement
+
+# Loss
+loss:
+  type: L1            # L1 for sharper edges on line art
+  use_perceptual: false
+  perceptual_weight: 0.1
+
+# Pretrained weights
+pretrained:
+  # URL to official SPAN weights pretrained on DF2K
+  url: https://github.com/hongyuanyu/SPAN/releases/download/v1.0.0/SPAN_4x.pth
+  path: checkpoints/SPAN_4x_pretrained.pth
+
+# Output
+output:
+  checkpoint_dir: checkpoints
+  results_dir: outputs
+

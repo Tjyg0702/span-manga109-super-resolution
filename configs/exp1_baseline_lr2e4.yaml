@@ -1,0 +1,33 @@
+# Experiment 1: Baseline config (original proposal settings)
+# LR: 2e-4, L1 loss, early stopping at 1000 iters
+
+name: exp1_baseline_lr2e4
+
+model:
+  num_features: 48
+  upscale: 4
+
+data:
+  manga109_dir: data/Manga109_released_2023_12_07/images
+  seed: 42
+
+training:
+  batch_size: 16
+  max_iters: 5000
+  lr: 0.0002           # 2e-4 (proposal default)
+  min_lr: 0.000001
+  weight_decay: 0.01
+  val_interval: 500
+  patience: 1000
+
+loss:
+  type: L1
+  use_perceptual: false
+
+pretrained:
+  path: checkpoints/SPAN_4x_pretrained.pth
+
+output:
+  checkpoint_dir: checkpoints/exp1_baseline
+  results_dir: outputs/exp1_baseline
+

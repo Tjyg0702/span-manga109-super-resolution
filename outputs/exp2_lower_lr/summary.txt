@@ -1,0 +1,4 @@
+Experiment: exp2_lower_lr
+Best PSNR: 22.80 dB
+Training time: 2.1 min
+Config: configs/exp2_lower_lr.yaml

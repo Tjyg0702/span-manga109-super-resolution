@@ -1,0 +1,4 @@
+Experiment: hat_finetuned
+Best PSNR: 22.98 dB
+Training time: 2.3 min
+Config: configs/hat_finetuned.yaml

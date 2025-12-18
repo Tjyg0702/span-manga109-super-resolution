@@ -1,0 +1,4 @@
+Experiment: swinir_finetuned
+Best PSNR: 22.53 dB
+Training time: 1.4 min
+Config: configs/swinir_finetuned.yaml

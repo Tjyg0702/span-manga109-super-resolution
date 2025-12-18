@@ -1,0 +1,4 @@
+Experiment: hat_manga
+Best PSNR: 16.87 dB
+Training time: 1.6 min
+Config: configs/hat_manga.yaml

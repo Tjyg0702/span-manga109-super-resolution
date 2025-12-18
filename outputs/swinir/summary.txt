@@ -1,0 +1,4 @@
+Experiment: swinir_manga
+Best PSNR: 17.73 dB
+Training time: 2.3 min
+Config: configs/swinir_manga.yaml

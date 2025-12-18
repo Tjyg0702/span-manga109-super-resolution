@@ -1,0 +1,4 @@
+Experiment: exp3_perceptual_loss
+Best PSNR: 22.19 dB
+Training time: 2.9 min
+Config: configs/exp3_perceptual_loss.yaml

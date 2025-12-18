@@ -1,0 +1,4 @@
+Experiment: exp1_baseline_lr2e4
+Best PSNR: 22.27 dB
+Training time: 1.4 min
+Config: configs/exp1_baseline_lr2e4.yaml

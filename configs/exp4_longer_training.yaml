@@ -1,0 +1,34 @@
+# Experiment 4: Longer training (no early stopping)
+# patience=5000 effectively disables early stopping
+# Hypothesis: Full 5000 iterations may yield better convergence
+
+name: exp4_longer_training
+
+model:
+  num_features: 48
+  upscale: 4
+
+data:
+  manga109_dir: data/Manga109_released_2023_12_07/images
+  seed: 42
+
+training:
+  batch_size: 16
+  max_iters: 5000
+  lr: 0.0001           # 1e-4 (moderate)
+  min_lr: 0.000001
+  weight_decay: 0.01
+  val_interval: 500
+  patience: 5000       # Effectively no early stopping
+
+loss:
+  type: L1
+  use_perceptual: false
+
+pretrained:
+  path: checkpoints/SPAN_4x_pretrained.pth
+
+output:
+  checkpoint_dir: checkpoints/exp4_longer
+  results_dir: outputs/exp4_longer
+
